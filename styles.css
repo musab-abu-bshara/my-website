@@ -149,12 +149,37 @@ nav a:hover{
   background: var(--hover-bg);
   border-radius: 6px;
 }
-@media screen {
+@media (max-width: 768px) {
+  header .container {
+    flex-direction: column;
+    padding: 10px;
+  }
   
+  header .logo {
+    margin: 10px 0;
+  }
+  
+  nav > ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  nav a {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+  
+  nav li.more ul {
+    position: fixed;
+    top: auto;
+    right: 10px;
+    left: 10px;
+    width: auto;
+  }
 }
 /* End Nav */
 /* Start Hero Section  */
-#hero{
+#hero .container{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -169,7 +194,6 @@ nav a:hover{
 .hero-content {
   flex: 1;
   max-width: 500px;
-  margin-left: 50px;
 }
 
 .hero-content h1 {
@@ -185,14 +209,29 @@ nav a:hover{
 
 .hero-content p {
   font-size: 1.2rem;
-  color: var(--text-secondary);
+  color: white;
   margin-bottom: 30px;
   line-height: 1.6;
 }
-
+.hero-content p .highlight{
+  background: var(--gradient-secondary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
+}
+.hero-content .hero-buttons{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-bottom: 10px;
+}
 .hero-content .btn {
   display: inline-block;
   padding: 12px 30px;
+  margin-left: 10px;
+  width: 170px;
+  text-align: center;
   background: var(--gradient-secondary);
   color: var(--text-primary);
   border-radius: 8px;
@@ -205,15 +244,47 @@ nav a:hover{
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(139, 92, 246, 0.4);
 }
+@media (max-width: 768px) {
+  .hero-content .hero-buttons{
+    justify-content: center;
+  }
+  #hero .container {
+    flex-direction: column-reverse;
+    padding: 30px 20px;
+    height: auto;
+    min-height: 100vh;
+  }
+  
+  .hero-content {
+    margin-left: 0;
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-content p {
+    font-size: 1rem;
+  }
+}
 /* End Hero Content */
 /* Start Hero Avatar */
-#hero-avatar{
-  position: relative;
+.box{
   width: 50%;
   height: 100%;
   display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#hero-avatar{
+  position: relative;
+  display: flex;
   justify-content: center;
   align-items: center;
+  width: 700px;
+  height: 300px;
 }
 #hero-avatar #avatar{
   position: relative;
@@ -272,43 +343,83 @@ nav a:hover{
 }
 #hero-avatar #html{
   top: calc(50% - 125px);
-  right: 200px;
+  right: 25%;
   animation: top-right-diagonal-float 2s ease-in-out infinite;
 }
 #hero-avatar #css{
   top: calc(50% - 68px);
-  right: 170px;
+  right: 20%;
   animation: top-right-diagonal-float 2s ease-in-out infinite;
 }
 #hero-avatar #javascript{
   top: 50%;
-  right: 170px;
+  right: 20%;
   animation: bottom-right-diagonal-float 2s ease-in-out infinite;
 }
 #hero-avatar #react{
   top: calc(50% + 60px);
-  right: 200px;
+  right: 25%;
   animation: bottom-right-diagonal-float 2s ease-in-out infinite;
 }
 #hero-avatar #rust{
   top: calc(50% - 125px);
-  left: 200px;
+  left: 25%;
   animation: top-left-diagonal-float 2s ease-in-out infinite;
 }
 #hero-avatar #tauri{
   top: calc(50% - 68px);
-  left: 170px;
+  left: 20%;
   animation: top-left-diagonal-float 2s ease-in-out infinite;
 }
 #hero-avatar #nodejs{
   top: 50%;
-  left: 170px;
+  left: 20%;
   animation: bottom-left-diagonal-float 2s ease-in-out infinite;
 }
 #hero-avatar #express{
   top: calc(50% + 60px);
-  left: 200px;
+  left: 25%;
   animation: bottom-left-diagonal-float 2s ease-in-out infinite;
+}
+@media (max-width: 768px) {
+  .box{
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 991px) {
+  #hero-avatar{
+    width: 400px !important;
+  }
+  #hero-avatar #express,#hero-avatar #rust{
+    left: 10%;
+  }
+  #hero-avatar #nodejs,#hero-avatar #tauri{
+    left: 5%;
+  }
+  #hero-avatar #react,#hero-avatar #html{
+    right: 10%;
+  }
+  #hero-avatar #javascript,#hero-avatar #css{
+    right: 5%;
+  }
+}
+@media (max-width: 1199px){
+  #hero-avatar{
+    width: 500px !important;
+  }
+  #hero-avatar #express,#hero-avatar #rust{
+    left: 15%;
+  }
+  #hero-avatar #nodejs,#hero-avatar #tauri{
+    left: 10%;
+  }
+  #hero-avatar #react,#hero-avatar #html{
+    right: 15%;
+  }
+  #hero-avatar #javascript,#hero-avatar #css{
+    right: 10%;
+  }
 }
 @keyframes top-right-diagonal-float {
   0% {
@@ -377,114 +488,6 @@ nav a:hover{
   }
   100% {
     opacity: 0.3;
-  }
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  header .container {
-    flex-direction: column;
-    padding: 10px;
-  }
-  
-  header .logo {
-    margin: 10px 0;
-  }
-  
-  nav > ul {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  nav a {
-    padding: 10px 15px;
-    font-size: 14px;
-  }
-  
-  nav li.more ul {
-    position: fixed;
-    top: auto;
-    right: 10px;
-    left: 10px;
-    width: auto;
-  }
-  
-  #hero {
-    flex-direction: column-reverse;
-    padding: 30px 20px;
-    height: auto;
-    min-height: 100vh;
-  }
-  
-  .hero-content {
-    margin-left: 0;
-    margin-top: 30px;
-    text-align: center;
-  }
-  
-  .hero-content h1 {
-    font-size: 2rem;
-  }
-  
-  .hero-content p {
-    font-size: 1rem;
-  }
-  
-  #hero-avatar {
-    width: 100%;
-    height: 300px;
-  }
-  
-  #hero-avatar #avatar {
-    width: 150px;
-    height: 150px;
-  }
-  
-  #hero-avatar div:not(#avatar) {
-    width: 30px;
-    height: 30px;
-    font-size: 18px;
-  }
-  
-  /* Adjust icon positions for mobile */
-  #hero-avatar #html{
-    top: calc(50% - 100px);
-    right: 120px;
-  }
-  
-  #hero-avatar #css{
-    top: calc(50% - 50px);
-    right: 100px;
-  }
-  
-  #hero-avatar #javascript{
-    top: calc(50% + 10px);
-    right: 100px;
-  }
-  
-  #hero-avatar #react{
-    top: calc(50% + 60px);
-    right: 120px;
-  }
-  
-  #hero-avatar #rust{
-    top: calc(50% - 100px);
-    left: 120px;
-  }
-  
-  #hero-avatar #tauri{
-    top: calc(50% - 50px);
-    left: 100px;
-  }
-  
-  #hero-avatar #nodejs{
-    top: calc(50% + 10px);
-    left: 100px;
-  }
-  
-  #hero-avatar #express{
-    top: calc(50% + 60px);
-    left: 120px;
   }
 }
 /* End Hero Avatar */
