@@ -517,7 +517,7 @@ footer .social > .logo{
 footer .social .info{
   display: flex;
   justify-content: center;
-  margin: 20px 0;
+  margin-bottom: 20px;
 }
 footer .social .info a {
   display: flex;
