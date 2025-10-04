@@ -498,17 +498,25 @@ footer{
   color: white;
 }
 footer .container{
-  display: grid;
-  grid-template-columns: repeat(auto-fill , minmax(250px , 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   gap: 40px;
-  padding-top: 70px;
+  padding-top: 40px;
   padding-bottom: 50px;
 }
-footer .social > h2{
-  font-size: 50px;
+footer .social{
+  text-align: center;
+}
+footer .social > .logo{
+  width: 80px;
+  height: 80px;
+
 }
 footer .social .info{
   display: flex;
+  justify-content: center;
   margin: 20px 0;
 }
 footer .social .info a {
@@ -519,16 +527,16 @@ footer .social .info a {
   height: 50px;
   align-items: center;
   justify-content: center;
-  transition: var(--main-transation);
+  transition: 0.3s;
 }
 footer .social .info a:not(:last-of-type){
-  margin-right: 10px;
+  margin-left: 10px;
 }
 footer .social .info a:nth-child(1):hover{
   background-color: #1877f2;
 }
 footer .social .info a:nth-child(2):hover{
-  background-color: #1da1f2;
+  background-color: var(--primary-dark);
 }
 footer .social .info a:nth-child(3):hover{
   background-color: #ff0000;
@@ -539,28 +547,28 @@ footer .social .info a i{
 footer .personal li{
   display: flex;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
+}
+footer .personal li .number{
+  direction: ltr;
 }
 footer .personal li i{
   font-size: 25px;
-  color: var(--main-color);
+  color: var(--accent-purple);
 }
 footer .personal li p{
   line-height: 1.7;
-  margin-left: 10px;
+  margin-right: 10px;
   color: #b9b9b9;
-  flex: 1;/*??*/
+  flex: 1;
 }
 footer .min-gellary{
-  /* display: grid; */
-  /* grid-template-columns: repeat(auto-fill , 200px); */
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 10px;
-  /* height: fit-content; */
 }
 footer .min-gellary .image{
-  /* height: 200px; */
+  width: 300px;
   border: solid 3px var(--accent-purple);
 }
 footer .min-gellary .image img{ 
@@ -574,8 +582,20 @@ footer > p{
   border-top: solid 1px #444;
 }
 @media (max-width: 767px) {
+
+  footer .min-gellary .image{
+    width: 100% !important;
+  }
+}
+@media (max-width: 991px) {
   footer .container{
     text-align: center;
+    flex-direction: column;
   }
+  footer .min-gellary{
+    grid-template-columns: 1fr 1fr;
+    /* justify-content: center; */
+  }
+  
 }
 /* Start Footer */
