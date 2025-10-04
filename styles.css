@@ -35,6 +35,7 @@
 html{
   direction: rtl;
   text-align: right;
+  scroll-behavior: smooth;
 }
 body{
   font-family: "Noto Sans Arabic", "Cairo", "Amiri", "Tajawal", sans-serif;
@@ -43,6 +44,10 @@ body{
 }
 *{
   box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 a{
   text-decoration: none;
@@ -55,16 +60,49 @@ ul{
 li{
   list-style: none;
 }
+.container{
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
 /* End Global Styles */
 /* Start Nav */
-nav{
-  background: var(--primary-dark);
+header{
+  background: var(--tertiary-dark);
   /* box-shadow: 0 2px 4px rgba(0,0,0,0.1); */
   position: sticky;
 }
-nav ul {
+header .container{
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+header .logo{
+  width: 48px;
+  height: 48px;
+  margin-left: 20px;
+}
+nav > ul {
+  display: flex;
+  justify-content: center;
+}
+nav li.more{
+  position: relative;
+}
+nav li.more ul{
+  position: absolute;
+  background-color: var(--tertiary-dark);
+  display: none;
+  height: 0px;
+  transition: 0.3s;
+}
+nav li.more:hover ul{
+  display: block;
+  height: auto;
+}
+nav li.more *{
+  z-index: 4;
 }
 nav a{
   color: #d8d8d8;
