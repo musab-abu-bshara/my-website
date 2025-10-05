@@ -989,3 +989,127 @@ footer > p{
   }
 }
 /* End Contact */
+/* Start Blog */
+#blog {
+  padding: 80px 50px;
+  background: var(--primary-dark);
+  min-height: 100vh;
+}
+
+#blog .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#blog .title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 60px;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Articles Grid */
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.article-card {
+  background: var(--secondary-dark);
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.article-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(139, 92, 246, 0.3);
+}
+
+.article-card .article-image {
+  height: 250px;
+  overflow: hidden;
+}
+
+.article-card .article-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.article-card:hover .article-image img {
+  transform: scale(1.1);
+}
+
+.article-card .article-content {
+  padding: 30px;
+}
+
+.article-card h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: var(--text-primary);
+  line-height: 1.4;
+  background: var(--gradient-secondary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.article-card p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #blog {
+    padding: 40px 20px;
+  }
+  
+  #blog .title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+  
+  .articles-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .article-card .article-content {
+    padding: 25px 20px;
+  }
+  
+  .article-card h3 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .articles-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .article-card .article-content {
+    padding: 20px 15px;
+  }
+  
+  .article-card h3 {
+    font-size: 1.2rem;
+  }
+}
+/* End Blog */
