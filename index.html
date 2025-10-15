@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مصعب أبوبشارة - مهندس حاسوب</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" href="media/musab.jpg" type="image/x-icon">
     <!-- Devicons Library -->
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <!-- Font Awesome Library -->
-    <link rel="stylesheet" href="all.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
   </head>
   <body>
     <!-- Start Navbar -->
@@ -18,12 +18,13 @@
         <img src="media/logo.png" alt="مصعب أبوبشارة" class="logo">
         <nav>
           <ul>
-            <li><a href="index.html" class="active">الرئيسية</a></li>
-            <li><a href="about.html">من أنا</a></li>
-            <li><a href="contact.html">اتصل بي</a></li>
-            <li><a href="services.html">خدماتي</a></li>
-            <li><a href="portfolio.html">أعمالي</a></li>
-            <li class="more">
+            <li><a href="#">الرئيسية</a></li>
+            <li><a href="#portfolio">أعمالي</a></li>
+            <li><a href="#skills">مهاراتي</a></li>
+            <li><a href="#about">من أنا</a></li>
+            <li><a href="#services">خدماتي</a></li>
+            <li><a href="#contact">اتصل بي</a></li>
+            <!-- <li class="more">
               <a href="#">المزيد</a>
               <ul>
                 <li><a href="album.html">ألبومي</a></li>
@@ -32,7 +33,7 @@
                 <li><a href="terms.html">الشروط والأحكام</a></li>
                 <li><a href="testimonials.html">آراء العملاء</a></li>
               </ul>
-            </li>
+            </li> -->
           </ul>
         </nav>
       </div>
@@ -92,6 +93,427 @@
       </div>
     </section>
     <!-- End Hero Section  -->
+    <!-- Start Portfolio Section -->
+    <section id="portfolio">
+    <h2 class="title">أعمالي</h2>
+    <div class="container">
+      <div class="portfolio-grid">
+        <div class="project-card">
+          <div class="project-image">
+            <img src="media/thuraa-landing.PNG" alt="منصة ثرى">
+          </div>
+          <div class="project-content">
+            <h3>منصة ثرى - مشروع التخرج</h3>
+            <p>منصة شاملة لإدارة ونشر الدورات التدريبية. طورت واجهات التفاعل بين المستخدمين والدورات والشركات والمدربين،
+              بالإضافة إلى إدارة الملفات الشخصية.</p>
+            <div class="project-tech">
+              <span>React</span>
+              <span>Node.js</span>
+              <span>Database</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="media/villages-landing.PNG" alt="نظام إدارة القرى">
+          </div>
+          <div class="project-content">
+            <h3>نظام إدارة القرى</h3>
+            <p>نظام متكامل لإدارة معلومات القرى وعرض الإحصائيات التفاعلية باستخدام Chart.js. يوفر تحليلات بصرية شاملة
+              لبيانات القرى والسكان.</p>
+            <div class="project-tech">
+              <span>Chart.js</span>
+              <span>JavaScript</span>
+              <span>Data Visualization</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="media/elzero-landing.PNG" alt="موقع الزيرو">
+          </div>
+          <div class="project-content">
+            <h3>موقع Elero</h3>
+            <p>تطبيق ويب من صفحة واحدة (SPA) يمثل نموذجاً لموقع شركة حديث. تصميم احترافي ومتجاوب مع واجهة مستخدم متطورة
+              وتجربة استخدام ممتازة.</p>
+            <div class="project-tech">
+              <span>SPA</span>
+              <span>HTML5</span>
+              <span>CSS3</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="media/dashboard-landing.PNG" alt="لوحة التحكم">
+          </div>
+          <div class="project-content">
+            <h3>لوحة التحكم الشخصية</h3>
+            <p>لوحة تحكم شخصية متطورة لإدارة المشاريع والبيانات. واجهة بديهية مع إحصائيات تفاعلية ونظام إدارة شامل
+              للمحتوى.</p>
+            <div class="project-tech">
+              <span>Dashboard</span>
+              <span>JavaScript</span>
+              <span>Responsive</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="media/kasper-landing.PNG" alt="موقع كاسبر">
+          </div>
+          <div class="project-content">
+            <h3>موقع Kasper للتصوير</h3>
+            <p>موقع شخصي لمصور فوتوغرافي مصمم كتطبيق من صفحة واحدة. عرض أنيق للأعمال مع معرض صور تفاعلي وتصميم بصري
+              جذاب.</p>
+            <div class="project-tech">
+              <span>Photography</span>
+              <span>Gallery</span>
+              <span>Animation</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="media/leon-landing.PNG" alt="موقع ليون">
+          </div>
+          <div class="project-content">
+            <h3>موقع Leon الشخصي</h3>
+            <p>موقع شخصي بسيط وأنيق مصمم كتطبيق من صفحة واحدة. تصميم نظيف ومتجاوب مع تركيز على تجربة المستخدم والبساطة.
+            </p>
+            <div class="project-tech">
+              <span>Personal</span>
+              <span>Clean Design</span>
+              <span>Minimalist</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+    <!-- End Portfolio Section -->
+    <!-- Start Skills Section -->
+    <section id="skills">
+      <div class="container">
+        <h2 class="title">مهاراتي التقنية</h2>
+        <div class="languages">
+          <h3>لغات البرمجة</h3>
+          <div class="skills-grid">
+            <div class="skill">
+              <i class="devicon-html5-plain colored"></i>
+              <h3>HTML5</h3>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+            </div>
+            <div class="skill">
+              <i class="devicon-css3-plain colored"></i>
+              <h3>CSS3</h3>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+            </div>
+            <div class="skill">
+              <i class="devicon-javascript-plain colored"></i>
+              <h3>JavaScript</h3>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+            </div>
+            <div class="skill">
+              <i class="devicon-rust-plain colored rust"></i>
+              <h3>Rust</h3>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+            </div>
+            <div class="skill">
+              <i class="devicon-cplusplus-plain colored"></i>
+              <h3>C++</h3>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+            </div>
+            <div class="skill">
+              <i class="devicon-java-plain colored"></i>
+              <h3>Java</h3>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="frameworks">
+          <h3>أطر العمل والتقنيات</h3>
+          <div class="skills-grid">
+            <div class="skill">
+              <i class="devicon-react-plain colored"></i>
+              <h3>React</h3>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+            </div>
+            <div class="skill">
+              <i class="devicon-nextjs-plain"></i>
+              <h3>Next.js</h3>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+            </div>
+            <div class="skill">
+              <i class="devicon-nodejs-plain colored"></i>
+              <h3>Node.js</h3>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+            </div>
+            <div class="skill">
+              
+            <i class="devicon-express-original colored"></i>
+              <h3>Express.js</h3>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+            </div>
+            <div class="skill">
+              <i class="devicon-tauri-plain colored"></i>
+              <h3>Tauri</h3>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="design">
+          <h3>أدوات التصميم</h3>
+          <div class="skills-grid">
+            <div class="skill">
+              <i class="devicon-bootstrap-plain colored"></i>
+              <h3>Bootstrap</h3>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+            </div>
+            <div class="skill">
+              <i class="devicon-sass-plain colored"></i>
+              <h3>Sass</h3>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+            </div>
+            <div class="skill">
+              <i class="devicon-materialui-plain colored"></i>
+              <h3>Material UI</h3>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+            </div>
+            <div class="skill">
+              <i class="devicon-less-plain-wordmark colored"></i>
+              <h3>Less</h3>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+            </div>
+            <div class="skill">
+              <i class="devicon-tailwindcss-plain colored"></i>
+              <h3>Tailwind</h3>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+    <!-- End Skills Section -->
+    <!-- Start About Section -->
+    <section id="about">
+      <div class="container">
+        <h2 class="title">من أنا</h2>
+        <div class="card">
+          <div class="avatar">
+            <img src="media/musab.jpg" alt="مصعب أبوبشارة">
+          </div>
+            <div class="info">
+              <h2>مصعب أبوبشارة</h2>
+              <p>مهندس حاسوب أعمل على تطوير مواقع ويب احترافية و تطبيقات سطح مكتب ذكية تجمع بين الأداء العالي والتصميم العصري.</p>
+            </div>
+        </div>
+        <div class="card">
+          <div class="avatar">
+            <img src="media/najah.png" alt="جامعة النجاح الوطنية">
+          </div>
+          <div class="info">
+            <h2>جامعة النجاح الوطنية</h2>
+            <p>أنا الآن على وشك التخرج من جامعة النجاح الوطنية، تخصص هندسة الحاسوب، حيث اكتسبت خلالها مهارات متقدمة في البرمجة وتطوير البرمجيات.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="avatar">
+            <img src="media/company.jpeg" alt="Grids Apps">
+          </div>
+          <div class="info">
+            <h2>Grids Apps</h2>
+            <p>أتدرب حاليًا في شركة Grids Apps في مسار تطوير واجهات المستخدم، حيث أطبق ما تعلمته في مشاريع عملية.</p>
+          </div>
+      </div>
+    </section>
+    <!-- End About Section -->
+    <!-- Start Services Section -->
+    <section id="services">
+    <h2 class="title">خدماتي</h2>
+    <div class="container">
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-code"></i>
+          </div>
+          <h3>تطوير مواقع الويب</h3>
+          <p>إنشاء مواقع ويب متجاوبة وحديثة باستخدام أحدث التقنيات مثل HTML5، CSS3، JavaScript، React، وNode.js. تصميم
+            يتكيف مع جميع الأجهزة وسرعة تحميل عالية.</p>
+          <div class="service-features">
+            <span>React & Node.js</span>
+            <span>تصميم متجاوب</span>
+            <span>أداء عالي</span>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-desktop"></i>
+          </div>
+          <h3>تطبيقات سطح المكتب</h3>
+          <p>إنشاء تطبيقات سطح المكتب عالية الأداء باستخدام تقنيات حديثة مثل Tauri وRust. تطبيقات سريعة وخفيفة مع واجهات
+            مستخدم عصرية وأمان متقدم.</p>
+          <div class="service-features">
+            <span>Tauri & Rust</span>
+            <span>أداء ممتاز</span>
+            <span>حجم صغير</span>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-database"></i>
+          </div>
+          <h3>تطوير أنظمة خلفية</h3>
+          <p>بناء خوادم وقواعد بيانات قوية وآمنة. إنشاء APIs متطورة وإدارة البيانات بكفاءة عالية باستخدام تقنيات مثل
+            Node.js وRust وقواعد البيانات المختلفة.</p>
+          <div class="service-features">
+            <span>REST APIs</span>
+            <span>قواعد بيانات</span>
+            <span>أمان متقدم</span>
+          </div>
+        </div>
+
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-tools"></i>
+          </div>
+          <h3>الصيانة والدعم التقني</h3>
+          <p>خدمات صيانة شاملة للمواقع والتطبيقات، تحديثات أمنية، تحسين الأداء، وحل المشاكل التقنية. دعم فني مستمر لضمان
+            عمل أنظمتك بأفضل كفاءة.</p>
+          <div class="service-features">
+            <span>صيانة شاملة</span>
+            <span>دعم 24/7</span>
+            <span>تحديثات أمنية</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+    <!-- End Services Section -->
+    <!-- Start contact Section -->
+    <section id="contact">
+      <h2 class="title">اتصل بي</h2>
+      <div class="container">
+        <div class="image">
+          <img src="media/discount.png" alt="">
+          <h2>لدينا خصم 20%</h2>
+          <p>استمتع بخصم 20% على جميع خدماتنا. لا تفوت الفرصة!</p>
+        </div>
+        <form action="">
+          <h2> أدخل معلوماتك</h2>
+          <input type="text" name="Name" id="" placeholder="اسمك">
+          <input type="email" name="Email" id="" placeholder="بريدك الإلكتروني">
+          <input type="text" name="Phone" id="" placeholder="رقم هاتفك">
+          <textarea name="Needs" id="" placeholder="أخبرنا عن احتياجاتك"></textarea>
+          <input type="submit" value="إرسال">
+        </form>
+      </div>
+    </section>
+    <!-- End contact Section -->
     <!-- Start Footer -->
       <footer>
       <div class="container">
