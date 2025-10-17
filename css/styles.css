@@ -280,24 +280,58 @@ section .container{
   justify-content: start;
   align-items: center;
   margin-bottom: 10px;
+  gap: 15px;
 }
+
+/* First Button - Gradient with Shadow Animation */
 .hero-content .btn {
   display: inline-block;
   padding: 12px 30px;
-  margin-left: 10px;
   width: 170px;
   text-align: center;
-  background: var(--gradient-secondary);
   color: var(--text-primary);
   border-radius: 8px;
   font-weight: 600;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+  position: relative;
 }
 
-.hero-content .btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(139, 92, 246, 0.4);
+.hero-content .btn:first-child {
+  background: var(--gradient-secondary);
+  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+  animation: shadowPulse 2s ease-in-out infinite;
+}
+
+.hero-content .btn:first-child:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 30px rgba(139, 92, 246, 0.6);
+  animation: none;
+}
+
+/* Second Button - Black with Pink Border */
+.hero-content .btn:nth-child(2) {
+  background: var(--primary-dark);
+  border: 2px solid var(--accent-pink);
+  box-shadow: 0 4px 15px rgba(236, 72, 153, 0.3);
+  animation: shadowPulse 2s ease-in-out infinite;
+}
+
+.hero-content .btn:nth-child(2):hover {
+  transform: scale(1.1);
+  background: var(--gradient-secondary);
+  border: 2px solid transparent;
+  box-shadow: 0 8px 30px rgba(139, 92, 246, 0.6);
+  animation: none;
+}
+
+/* Shadow Pulse Animation */
+@keyframes shadowPulse {
+  0%, 100% {
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+  }
+  50% {
+    box-shadow: 0 6px 25px rgba(139, 92, 246, 0.5);
+  }
 }
 @media (max-width: 768px) {
   .hero-content .hero-buttons{
