@@ -37,6 +37,42 @@ body{
   padding: 0;
   background: var(--primary-dark);
 }
+
+/* Custom Scrollbar Styles - Modern Gradient */
+/* For Webkit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 12px; /* Width of vertical scrollbar */
+  height: 12px; /* Height of horizontal scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: var(--secondary-dark);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gradient-secondary); /* Gradient thumb - Purple to Pink */
+  border-radius: 10px;
+  border: 2px solid var(--secondary-dark); /* Creates padding effect */
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gradient-accent); /* Change gradient on hover - Pink to Cyan */
+  border: 2px solid var(--primary-dark);
+  box-shadow: 0 0 10px rgba(139, 92, 246, 0.5); /* Purple glow effect */
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: var(--gradient-accent); /* Third gradient when clicking */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-blue) var(--secondary-dark);
+}
+
 *{
   box-sizing: border-box;
   -moz-box-sizing: border-box;
