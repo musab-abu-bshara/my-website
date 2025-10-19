@@ -680,10 +680,14 @@ footer > p{
 #about .container{
   /* position: relative; */
   display: block;
-  padding: 20px 50px;
+  padding: 20px 100px;
+}
+#about .cards-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
 }
 #about .card{
-  margin-bottom: 20px;
   background: var(--secondary-dark);
   padding: 20px;
   border-radius: 12px;
@@ -691,6 +695,8 @@ footer > p{
   box-shadow: 0 4px 15px rgba(139, 92, 246, 0.2);
   transition: all 0.3s ease;
   display: flex;
+  flex-direction: column;
+  text-align: center;
   align-items: center;
   justify-content: start;
 }
@@ -712,7 +718,6 @@ footer > p{
 }
 #about .info{
   flex: 1;
-  margin-right: 30px;
 }
 #about .info h2{
   font-size: 24px;
@@ -728,12 +733,7 @@ footer > p{
   font-size: 18px;
 }
 @media (max-width: 768px) {
-  #about .card{
-    flex-direction: column;
-    text-align: center;
-  }
   #about .info{
-    margin-right: 0;
     margin-top: 15px;
   }
 }
@@ -1483,7 +1483,7 @@ footer > p{
 #services {
   padding: 80px 50px;
   background: var(--primary-dark);
-  min-height: 100vh;
+  /* min-height: 100vh; */
 }
 
 #services .container {
