@@ -11,6 +11,16 @@
   <link rel="stylesheet" href="css/devicons/devicon.min.css" />
   <!-- Font Awesome Library -->
   <link rel="stylesheet" href="css/all.min.css">
+  <!-- EmailJS Library -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init({
+        publicKey: "Sn6WdI9-6zc_fymXI",
+      });
+    })();
+  </script>
 </head>
 
 <body>
@@ -647,7 +657,7 @@
         <h2>لدينا خصم 20%</h2>
         <p>استمتع بخصم 20% على جميع خدماتنا. لا تفوت الفرصة!</p>
       </div>
-      <form action="" id="contact-form">
+      <form id="contact-form">
         <h2> أدخل معلوماتك</h2>
         <input type="text" name="Name" id="name" placeholder="اسمك" maxlength="50">
         <input type="email" name="Email" id="email" placeholder="بريدك الإلكتروني">
@@ -710,7 +720,8 @@
     <p class="conclusion">&copy; 2025 جميع الحقوق محفوظة – مصعب أبوبشارة</p>
 
   </footer>
-  <!-- Start Footer -->
+  <!-- End Footer -->
+  <script src="app.js"></script>
 </body>
 
 </html>

@@ -125,10 +125,21 @@ function sendEmail() {
     });
 }
 
-// Event listener
-document
-  .getElementById("contact_submition")
-  .addEventListener("click", function (event) {
-    event.preventDefault();
-    sendEmail();
-  });
+// Event listeners - Wait for DOM to load
+document.addEventListener("DOMContentLoaded", function () {
+  // Prevent form default submission
+  document
+    .getElementById("contact-form")
+    .addEventListener("submit", function (event) {
+      event.preventDefault();
+      sendEmail();
+    });
+
+  // Also handle button click (backup)
+  document
+    .getElementById("contact_submition")
+    .addEventListener("click", function (event) {
+      event.preventDefault();
+      sendEmail();
+    });
+});
