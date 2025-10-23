@@ -1516,19 +1516,21 @@ footer > p{
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .service-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 20px 40px rgba(139, 92, 246, 0.3);
-  border-color: var(--accent-blue);
+  border: 2px solid var(--accent-purple);
 }
 
 .service-icon {
   width: 80px;
   height: 80px;
   margin: 0 auto 25px;
-  background: var(--gradient-primary);
+  background: var(--gradient-secondary);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -1538,7 +1540,8 @@ footer > p{
 
 .service-card:hover .service-icon {
   transform: scale(1.1);
-  background: var(--gradient-secondary);
+  background: var(--accent-purple);
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
 }
 
 .service-icon i {
@@ -1562,8 +1565,82 @@ footer > p{
   line-height: 1.6;
   margin-bottom: 25px;
   font-size: 15px;
+  flex: 1;
 }
 
+/* Service Tools Component */
+.service-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.service-card .tool {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--tertiary-dark);
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 2px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.service-card .tool i {
+  font-size: 18px;
+}
+
+.service-card .tool span {
+  color: var(--text-primary);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.service-card:hover .tool {
+  /* background: var(--accent-purple); */
+  border-color: var(--accent-purple);
+  transform: translateY(-2px);
+}
+
+.service-card:hover .tool span {
+  color: white;
+}
+
+/* Service Tags Component */
+.service-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-top: auto;
+  padding-top: 15px;
+}
+
+.service-tags .tag {
+  background: var(--secondary-dark);
+  color: var(--accent-purple);
+  padding: 6px 14px;
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: 600;
+  border: 1px solid var(--accent-purple);
+  transition: all 0.3s ease;
+  letter-spacing: 0.3px;
+  font-family: "Cairo", "Noto Sans Arabic", sans-serif;
+}
+
+.service-card:hover .service-tags .tag {
+  background: var(--accent-purple);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(139, 92, 246, 0.3);
+}
+
+/* Legacy service-features support */
 .service-features {
   display: flex;
   flex-wrap: wrap;
