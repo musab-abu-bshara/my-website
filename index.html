@@ -647,13 +647,13 @@
         <h2>لدينا خصم 20%</h2>
         <p>استمتع بخصم 20% على جميع خدماتنا. لا تفوت الفرصة!</p>
       </div>
-      <form action="">
+      <form action="" id="contact-form">
         <h2> أدخل معلوماتك</h2>
-        <input type="text" name="Name" id="" placeholder="اسمك">
-        <input type="email" name="Email" id="" placeholder="بريدك الإلكتروني">
-        <input type="text" name="Phone" id="" placeholder="رقم هاتفك">
-        <textarea name="Needs" id="" placeholder="أخبرنا عن احتياجاتك"></textarea>
-        <input type="submit" value="إرسال">
+        <input type="text" name="Name" id="name" placeholder="اسمك" maxlength="50">
+        <input type="email" name="Email" id="email" placeholder="بريدك الإلكتروني">
+        <input type="tel" name="Phone" id="phone" placeholder="رقم هاتفك مع مقدمة الدولة" maxlength="15">
+        <textarea name="Needs" id="needs" placeholder="أخبرنا عن احتياجاتك" maxlength="500"></textarea>
+        <input type="submit" value="إرسال" id="contact_submition">
       </form>
     </div>
   </section>
