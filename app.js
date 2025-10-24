@@ -86,14 +86,26 @@ function sendEmail() {
   const phone = document.getElementById("phone").value.trim();
   const needs = document.getElementById("needs").value.trim();
 
-  // Prepare data
+  // Get current time
+  const now = new Date();
+  const time = now.toLocaleString("ar-EG", {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+  });
+
+  // Prepare data to match template variables
   const Data = {
-    to_email: "musab.f.abubshara@gmail.com",
-    from_email: email || "لم يتم تقديم بريد إلكتروني",
     name: name,
+    to_email: "musab.f.abubshara@gmail.com",
+    email: email || "لم يتم تقديم بريد إلكتروني",
     phone: phone || "لم يتم تقديم رقم هاتف",
-    needs: needs,
     subject: "Contact From my-website",
+    message: needs,
+    time: time,
   };
 
   // Disable button during sending
