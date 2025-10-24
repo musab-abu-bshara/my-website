@@ -73,6 +73,25 @@ body{
   scrollbar-color: var(--accent-blue) var(--secondary-dark);
 }
 
+/* Custom Text Selection - Matches Website Theme */
+::selection {
+  background: var(--accent-purple); /* Purple background */
+  color: white;
+  text-shadow: none;
+}
+
+::-moz-selection {
+  background: var(--accent-purple); /* Purple background for Firefox */
+  color: white;
+  text-shadow: none;
+}
+
+/* Alternative gradient selection (optional - uncomment if you prefer gradient) */
+/* ::selection {
+  background: linear-gradient(135deg, var(--accent-purple), var(--accent-pink));
+  color: white;
+} */
+
 *{
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -997,6 +1016,12 @@ footer > p{
 #contact form input::placeholder,
 #contact form textarea::placeholder{
   color: var(--text-muted);
+}
+
+/* Phone input placeholder align right */
+#contact form input[type="tel"]::placeholder {
+  text-align: right;
+  direction: rtl;
 }
 
 #contact form input:focus,
